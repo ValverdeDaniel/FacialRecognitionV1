@@ -1,4 +1,4 @@
-
+'''Need to Modify all this code'''
 # load dogs vs cats dataset, reshape and save to a new file
 from os import listdir
 from numpy import asarray
