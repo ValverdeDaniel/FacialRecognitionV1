@@ -1,37 +1,31 @@
 import numpy
 import cv2
 from os import makedirs
-from os import listdir
-from shutil import copyfile
-from random import seed
-from random import random
-
-
-# create directories (Dog Name is Main Directory are sub-directr Train and Test)
-dataset_home = 'Aila/'
-subdirs = ['train/', 'test/']
-for subdir in subdirs:
-	newdir = dataset_home + subdir + labldir
-	makedirs(newdir, exist_ok=True)
-# seed random number generator
-seed(1)
-# define ratio of pictures to use for validation
-val_ratio = 0.25
-# copy training dataset images into subdirectories
-src_directory = 'train/'
-for file in listdir(src_directory):
-	src = src_directory + '/' + file
-	dst_dir = 'train/'
-	if random() < val_ratio:
-		dst_dir = 'test/'
-	if file.startswith('cat'):
-		dst = dataset_home + dst_dir + 'cats/'  + file
-		copyfile(src, dst)
-	elif file.startswith('dog'):
-		dst = dataset_home + dst_dir + 'dogs/'  + file
-		copyfile(src, dst)
+from matplotlib import pyplot
+from matplotlib.image import imread
+#Define Dog Name
+dogName = 'Aila'
+# create directories for raw image capture
+dataset_home = dogName+'/'
+makedirs(dataset_home, exist_ok=True)
+# capture images
 camera = cv2.VideoCapture(0)
-for i in range(3):
+for i in range(100):
     return_value, image = camera.read()
-    cv2.imwrite('opencv'+str(i)+'.png', image)
+    cv2.imwrite('Aila'+str(i)+'.png', image) #Change first String to Dog name
 del(camera)
+
+
+# plot dog photos
+# plot first few images
+for i in range(9):
+	# define subplot
+	pyplot.subplot(330 + 1 + i)
+	# define filename
+	filename = dataset_home + dogName + '.' + str(i) + '.png'
+	# load image pixels
+	image = imread(filename)
+	# plot raw pixel data
+	pyplot.imshow(image)
+# show the figure
+pyplot.show()
