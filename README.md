@@ -85,11 +85,11 @@ $git checkout -b "myNameBranch"
 $git pull
 
 
-#This makes it so that when ever you do git pull you pull the contents from main
+#This makes it so that when ever you do git pull you pull the contents from the main branch
 
 $git branch --set-upstream-to=origin/main myNameBranch
 
-#this makes it so that if more than one person are working on branch when you type git  #pull you pull the contents from myNameBranch
+#this makes it so that if more than one person is working on branch when you type git pull you pull any new contents from myNameBranch
 
 $git branch --set-upstream-to=origin/myNameBranch
 
@@ -99,7 +99,7 @@ $git pull
 
 $touch myName.txt
 
-#the following will push all of your additions to your branch assuming you're still in your branch
+#the following few commands up until the git push will push all of your additions to your branch assuming you're still in your branch
 
 $git status
 
