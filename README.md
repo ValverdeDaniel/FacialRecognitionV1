@@ -8,38 +8,38 @@ https://git-scm.com/downloads
 
 #When you get to the pushing main branch portion im pretty sure that it will require that you have connected your git bash terminal to your github account... i remember that once i tried doing my first pull or push it gave me some error message and asked me to login. There's also connecting using SSH but if you can just do the login portion it's definitely easier.
 
-# the lines with the $ contain the commands you type. type the commands without the $
+#the lines with the $ contain the commands you type. type the commands without the $
 
 ### THE GETTING STARTED PORTION
 #this command should take you to your desktop directory
 $ cd ~/desktop
 
-# this command shows you the different directories and files that you currently have #access to
+#this command shows you the different directories and files that you currently have #access to
 $ ls
 
-# creates a folder on your desktop labeled WinterGroupProject2020
+#creates a folder on your desktop labeled WinterGroupProject2020
 $ mkdir WinterGroupProject2020
 
-# moves you to the directory WinterGroupProject2020... if you press tab once you've started typing it auto-fills in the rest of the word
+#moves you to the directory WinterGroupProject2020... if you press tab once you've started typing it auto-fills in the rest of the word
 $ cd WinterGroupProject2020
 
-# this command will make a version of the github repository... you can find the link
+#this command will make a version of the github repository... you can find the link
 $ git clone https://github.com/ValverdeDaniel/FacialRecognitionV1.git
 
-# move into the directory FacialRecognitionV1
+#move into the directory FacialRecognitionV1
 $cd FacialRecognitionv1
 
-# inspect directory
+#inspect directory
 $ ls
 
-###THE PUSHING TO MAIN BRANCH PORTION
+# THE PUSHING TO MAIN BRANCH PORTION
 # pulls all updates to your directory... good practice to do this before making any updates
 $ git pull
 
-# open up the directory of FacialRecognitionV1 in pycharm and open the readme.md file
+#open up the directory of FacialRecognitionV1 in pycharm and open the readme.md file
 #write something down on the file and save it
 
-# back in the git bash terminal type and it should mention some modifications
+#back in the git bash terminal type and it should mention some modifications
 $ git status
 
 #the following series of commands will push your changes to git hub as long as you are a collaborator and have connected your git bash terminal to your github account
@@ -56,7 +56,7 @@ $git commit -m "my tests"
 $git push origin main
 
 
-##THE BRANCHING PORTION OF THE TUTORIAL
+# THE BRANCHING PORTION OF THE TUTORIAL
 #this creates a new branch
 $git checkout -b "myNameBranch"
 
