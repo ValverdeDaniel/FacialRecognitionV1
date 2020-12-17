@@ -33,7 +33,7 @@ $cd FacialRecognitionv1
 $ ls
 
 # THE PUSHING TO MAIN BRANCH PORTION
-# pulls all updates to your directory... good practice to do this before making any updates
+#pulls all updates to your directory... good practice to do this before making any updates
 $ git pull
 
 #open up the directory of FacialRecognitionV1 in pycharm and open the readme.md file
@@ -60,7 +60,7 @@ $git push origin main
 #this creates a new branch
 $git checkout -b "myNameBranch"
 
-#this is good practice and one should almost always pull the contents from main to your #branch in order to keep your branch up to date before doing work on your branch
+# Pulling is good practice and one should almost always pull the contents from main to your branch in order to keep your branch up to date before doing work on your branch. when in doubt git PULL
 $git pull
 
 
