@@ -10,7 +10,7 @@ https://git-scm.com/downloads
 
 #the lines with the $ contain the commands you type. type the commands without the $
 
-### THE GETTING STARTED PORTION
+### THE GETTING STARTED and maneuvering directories PORTION
 #this command should take you to your desktop directory
 
 $ cd ~/desktop
@@ -32,6 +32,14 @@ $ cd WinterGroupProject2020
 $ git clone https://github.com/ValverdeDaniel/FacialRecognitionV1.git
 
 #move into the directory FacialRecognitionV1
+
+$cd FacialRecognitionv1
+
+#move backwards one directory
+
+$ cd ../
+
+#move back into facial recognition directory
 
 $cd FacialRecognitionv1
 
