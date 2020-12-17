@@ -49,7 +49,7 @@ $git add .
 
 $ git status
 
-#prepares your updates so that all the added updates are ready to be pushed
+#prepares your updates so that all the added updates are ready to be pushed... the stuff in "" is a message to yourself and the group summarizing what you have done it's good for keeping tabs
 $git commit -m "my tests"
 
 #pushes all of your committed changes to the branch you specified
