@@ -76,8 +76,10 @@ $git pull
 $touch myName.txt
 
 #the following will push all of your additions to your branch assuming you're still in your branch
+
 $git status
 
+# it is also good practice to pull before pushing in order to make sure there's no merge conflicts
 $git pull
 
 $git add .
