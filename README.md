@@ -12,27 +12,35 @@ https://git-scm.com/downloads
 
 ### THE GETTING STARTED PORTION
 #this command should take you to your desktop directory
+
 $ cd ~/desktop
 
-#this command shows you the different directories and files that you currently have #access to
+#this command shows you the different directories and files that you currently have access to
+
 $ ls
 
 #creates a folder on your desktop labeled WinterGroupProject2020
+
 $ mkdir WinterGroupProject2020
 
 #moves you to the directory WinterGroupProject2020... if you press tab once you've started typing it auto-fills in the rest of the word
+
 $ cd WinterGroupProject2020
 
 #this command will make a version of the github repository... you can find the link
+
 $ git clone https://github.com/ValverdeDaniel/FacialRecognitionV1.git
 
 #move into the directory FacialRecognitionV1
+
 $cd FacialRecognitionv1
 
 #inspect directory
+
 $ ls
 
 # THE PUSHING TO MAIN BRANCH PORTION
+
 #pulls all updates to your directory... good practice to do this before making any updates
 $ git pull
 
@@ -45,34 +53,42 @@ $ git status
 #the following series of commands will push your changes to git hub as long as you are a collaborator and have connected your git bash terminal to your github account
 
 #stages all of your updates
+
 $git add .
 
 $ git status
 
 #prepares your updates so that all the added updates are ready to be pushed... the stuff in "" is a message to yourself and the group summarizing what you have done it's good for keeping tabs
-$git commit -m "my tests"
 
+$git commit -m "my tests"
+ 
 #pushes all of your committed changes to the branch you specified
+
 $git push origin main
 
 
 # THE BRANCHING PORTION OF THE TUTORIAL
 #this creates a new branch
+
 $git checkout -b "myNameBranch"
 
 # Pulling is good practice and one should almost always pull the contents from main to your branch in order to keep your branch up to date before doing work on your branch. when in doubt git PULL
+
 $git pull
 
 
 #This makes it so that when ever you do git pull you pull the contents from main
+
 $git branch --set-upstream-to=origin/main myNameBranch
 
 #this makes it so that if more than one person are working on branch when you type git  #pull you pull the contents from myNameBranch
+
 $git branch --set-upstream-to=origin/myNameBranch
 
 $git pull
 
 #this creates a txt file within your branch
+
 $touch myName.txt
 
 #the following will push all of your additions to your branch assuming you're still in your branch
@@ -80,6 +96,7 @@ $touch myName.txt
 $git status
 
 # it is also good practice to pull before pushing in order to make sure there's no merge conflicts
+
 $git pull
 
 $git add .
@@ -94,5 +111,6 @@ Follow the pull request steps and boom you have now merged your branch with main
 #For some extra practice make sure that you are in your branch delete the myName.txt file and try merging that with master so there is no more myName.txt file
 
 #This places you back in the main branch
+
 $git checkout main
 
