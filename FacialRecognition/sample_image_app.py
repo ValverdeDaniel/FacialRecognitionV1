@@ -18,7 +18,7 @@ else:
 	rangeStop = len(file_list) + 25
 
 # capture images
-camera = cv2.VideoCapture(0)
+camera = cv2.VideoCapture(0) #set to 1 for USB Connected Camera
 for i in range(25):
     return_value, image = camera.read()
     cv2.imwrite(dataset_home+'Aila'+str(i)+'.png', image)
