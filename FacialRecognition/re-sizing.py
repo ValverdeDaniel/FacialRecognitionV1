@@ -3,13 +3,23 @@
 from os import listdir
 from numpy import asarray
 from numpy import save
-from keras.preprocessing.image import load_img
-from keras.preprocessing.image import img_to_array
+import cv2
 # define location of dataset
 folder = 'train/'
 photos, labels = list(), list()
+# find the size of the image
+img = cv2.imread('myImage.png')
+height, width, channels = img.shape
+
+#Center Section Algorithm (200 x 200)
+y = (width-height)//2
+good = file[:, y:y+height]
+good = cv2.resize(good,(224,224))
 # enumerate files in the directory
 for file in listdir(folder):
+	y = (width-height)//2
+	good = file[:, y:y+height]
+	good = cv2.resize(good,(224,224))
 	# determine class
 	output = 0.0
 	if file.startswith('cat'):

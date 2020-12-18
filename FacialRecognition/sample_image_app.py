@@ -5,14 +5,17 @@ from matplotlib import pyplot
 from matplotlib.image import imread
 #Define Dog Name
 dogName = 'Aila'
+path = 'C:/Users/micha/Machine Learning/FacialRecognitionV1/FacialRecognition'
+
 # create directories for raw image capture
 dataset_home = dogName+'/'
 makedirs(dataset_home, exist_ok=True)
+writeLocation = path + dataset_home
 # capture images
 camera = cv2.VideoCapture(0)
-for i in range(100):
+for i in range(10):
     return_value, image = camera.read()
-    cv2.imwrite('Aila'+str(i)+'.png', image) #Change first String to Dog name
+    cv2.imwrite(writeLocation+'Aila'+str(i)+'.png', image)
 del(camera)
 
 
