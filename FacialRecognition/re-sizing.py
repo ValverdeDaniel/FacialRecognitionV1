@@ -16,5 +16,4 @@ for file in listdir(folder):
 	y = (width-height)//2
 	scaled = file[:, y:y+height]
 	scaled = cv2.resize(scaled,(200,200))
-
-#need to complete imwrite section
+	cv2.imwrite(dataset_home+'Aila'+str(i)+'.png', scaled)
