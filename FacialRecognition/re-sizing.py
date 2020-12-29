@@ -3,28 +3,18 @@
 from os import listdir
 from numpy import asarray
 from numpy import save
-from keras.preprocessing.image import load_img
-from keras.preprocessing.image import img_to_array
+import cv2
 # define location of dataset
-folder = 'train/'
+
 photos, labels = list(), list()
-# enumerate files in the directory
-for file in listdir(folder):
-	# determine class
-	output = 0.0
-	if file.startswith('cat'):
-		output = 1.0
-	# load image
-	photo = load_img(folder + file, target_size=(200, 200))
-	# convert to numpy array
-	photo = img_to_array(photo)
-	# store
-	photos.append(photo)
-	labels.append(output)
-# convert to a numpy arrays
-photos = asarray(photos)
-labels = asarray(labels)
-print(photos.shape, labels.shape)
-# save the reshaped photos
-save('dogs_vs_cats_photos.npy', photos)
-save('dogs_vs_cats_labels.npy', labels)
+# find the size of the image
+img = cv2.imread('Aila/Aila0.png')
+height, width, channels = img.shape
+
+#Center Section Algorithm (200 x 200)
+for file in listdir('Aila'):
+	y = (width-height)//2
+	img = cv2.imread('Aila/'+file)
+	scaled = img[:, y:y+height]
+	scaled = cv2.resize(scaled,(200,200))
+	cv2.imwrite('+'Aila'+str(i)+'.png', scaled)
