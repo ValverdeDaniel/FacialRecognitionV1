@@ -53,7 +53,10 @@ $ ls
 $ git pull
 
 #open up the directory of FacialRecognitionV1 in pycharm and open the readme.md file
+
 #write something down on the file and save it
+
+# testing
 
 #back in the git bash terminal type and it should mention some modifications
 $ git status
